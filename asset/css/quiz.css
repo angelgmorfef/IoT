@@ -1,0 +1,130 @@
+/* Reset mínimo para margen y padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos del body */
+body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--dark-text); /* Color de texto predeterminado usando la variable */
+    background-color: rgb(239, 239, 239); /* Color de fondo general de la página */
+    background-image: url(/asset/img/mountains-1412683.svg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin: 0; /* Elimina el margen predeterminado del navegador */
+}
+
+/* Encabezado */
+header {
+  margin-bottom: 20px;
+}
+
+h1 {
+    margin: 0; /* Elimina el margen predeterminado del título */
+    text-align: center; /* Centra el título */
+    padding-top: 2rem;
+    padding-bottom: 1rem; /* Pequeño padding debajo del título */
+    color: #0b0039;
+    font-size: 2.5rem;
+}
+
+#quiz-container {
+  background: #ffffff;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 700px;
+  padding: 2rem;
+  padding-bottom: 3rem;
+  padding-top: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.187);
+}
+
+/* Cada pregunta */
+.question {
+    margin-bottom: 3rem;
+    font-size: 2rem;
+    color: #0b0039;
+    text-align: center;
+}
+
+/* Lista de opciones */
+.options {
+    list-style: none;
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+}
+
+.options li {
+  margin-bottom: 10px;
+}
+
+/* Inputs radio y etiquetas */
+.options input[type="radio"] {
+  margin-right: 8px;
+}
+
+/* Botón de navegación */
+#controls {
+  margin-top: 10px;
+}
+
+#next-btn {
+  background: #0b0039;
+  color: #ffffff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 4px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+#next-btn:disabled {
+  background: #6a6a6a70;
+  cursor: not-allowed;
+}
+
+#next-btn:hover:not(:disabled){
+    background: #ff7700; /* Color más oscuro al pasar el mouse */
+    color: #000000; /* Color de texto al pasar el mouse */
+}
+
+/* Resultado final */
+#results {
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+#back-to-index {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 60px;
+  height: 60px;
+  background-color: #0b0039;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  border: none;
+  border-radius: 5%;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  cursor: pointer;
+  z-index: 1000;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+#back-to-index:hover {
+  background-color: #ff6f00;
+  transform: scale(1.05);
+}
